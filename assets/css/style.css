@@ -762,14 +762,14 @@ ul.contact li a {
     margin: 0 auto;
 }
 
-div#main {
+.body-wrapper-inner{
     margin-left: 20rem;
     -moz-transition: margin-left 0.5s ease, box-shadow 0.5s ease;
     -webkit-transition: margin-left 0.5s ease, box-shadow 0.5s ease;
     -ms-transition: margin-left 0.5s ease, box-shadow 0.5s ease;
     transition: margin-left 0.5s ease, box-shadow 0.5s ease;
 }
-div#main.inactive{
+.body-wrapper-inner.inactive{
     margin-left: 0;
 } 
 
@@ -834,7 +834,7 @@ section#banner {
     min-height: 800px;
 }
 
-section#banner:after {
+div#wrapper:after {
     content: "";
     display: block;
     width: 100%;
@@ -935,7 +935,7 @@ header#header {
     display: flex;
 }
 footer#footer {
-    background-color: #403f3f;
+    /* background-color: #403f3f; */
     color: #fff;
     text-align: center;
     padding: 2% 0;
@@ -949,8 +949,8 @@ footer#footer {
 .about-wrapper {
     padding:5% 0;
     text-align: center;
-    background-color: #fff;
-    color: #000;
+    /* background-color: #fff; */
+    color: #fff;
 }
 
 .about-wrapper .about-content {
@@ -997,7 +997,7 @@ input[type="submit"]:hover, input[type="reset"]:hover,
 .education-wrapper,
 .projects-wrapper{
     padding: 5% 0;
-    background-color: rgba(18, 16, 16, 0.85);
+    /* background-color: rgba(18, 16, 16, 0.85); */
     color: #fff;
 }
 
@@ -1125,7 +1125,7 @@ ul.contact li a {
     section#banner {
         padding: 0 5em 0.1em 5em ;
     }
-    div#main {
+    .body-wrapper-inner {
         margin-left: 21em;
     }
 }
@@ -1134,7 +1134,7 @@ ul.contact li a {
     section#banner {
         padding: 0 4em 0.1em 4em ;
     }
-    div#main {
+    .body-wrapper-inner {
         margin-left: 21em;
     }
     .about-wrapper .about-content {
@@ -1161,11 +1161,11 @@ ul.contact li a {
         margin-left: -24em;
     }
     
-    div#main {
+    .body-wrapper-inner {
         margin-left: 0;
     }
     
-    div#main.inactive {
+    .body-wrapper-inner.inactive {
         margin-left: 21em;
     }
     
@@ -1255,13 +1255,101 @@ body.body-wrapper {
     overflow-x: hidden;
 }
 
+header#header {
+    padding: 1.5em 0 1em 0;
+}
 
+div#sidebar {
+    max-height: calc(100vh - 105px);
+    margin-top: 105px;
+    margin-left: 50px;
+    width: calc(20rem - 50px);
+    height: auto;
+    bottom: 50px;
+}
 
+div#wrapper {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+#sidebar > .inner {
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 100%;
+}
 
+.body-wrapper-inner {
+    -moz-flex-grow: 1;
+    -webkit-flex-grow: 1;
+    -ms-flex-grow: 1;
+    flex-grow: 1;
+    -moz-flex-shrink: 1;
+    -webkit-flex-shrink: 1;
+    -ms-flex-shrink: 1;
+    flex-shrink: 1;
+    width: 100%;
+    position: relative;
+}
 
+#sidebar > .inner {
+    width: auto;
+}
+.body-wrapper-inner {
+    z-index: 50;
+}
+.body-wrapper-inner {
+    z-index: 50;
+}
 
+section header.major h2 {
+    color: #fff !important;
+    font-size: 45px;
+    text-transform: uppercase;
+}
 
+#sidebar h2 {
+    color: #000 !important;
+    font-size: 30px;
+}
+#main section p {
+    color: #fff;
+    font-size: 25px;
+    letter-spacing: 2px;
+}
+.education-wrapper p , .projects-wrapper p {
+    font-size: 16px !important;
+}
 
+@media(max-width:767px){
+    .body-wrapper-inner.inactive {
+        margin-left: 0 !important;
+    }
+    
+    #sidebar.inactive {
+        margin-left: -24em;
+    }
+    
+    #main section p {
+        font-size: 16px;
+    }
+    
+    .experience-content {
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    div#sidebar {
+        max-height: calc(100vh - 70px);
+        width: calc(20rem - 80px);
+        margin-left: 30px;
+    }
+    
+    #sidebar h2 {
+        font-size: 20px;
+    }
+}
 /*=============== Animation ==================*/
 
 
