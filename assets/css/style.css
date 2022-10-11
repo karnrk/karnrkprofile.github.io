@@ -1349,6 +1349,18 @@ section header.major h2 {
     #sidebar h2 {
         font-size: 20px;
     }
+    div#sidebar {
+        margin-left: -24em;
+    }
+
+    #sidebar.inactive {
+        margin-left: 30px;
+    }
+
+    #sidebar .toggle {
+        left: 25em;
+    }
+
 }
 /*=============== Animation ==================*/
 
